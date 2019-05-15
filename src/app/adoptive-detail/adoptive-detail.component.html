@@ -1,0 +1,25 @@
+<section>
+  <div>
+    <mat-card class="adoption-card">
+      <mat-card-header>
+        <mat-card-title>{{ selectedAnimal.name }}</mat-card-title>
+        <mat-card-subtitle>Species: {{ selectedAnimal.species }}</mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-image [src]="'../../assets/' + selectedAnimal.imagefilename"
+        alt="'Photo of ' + {{ selectedAnimal.name }}">
+      <mat-card-content>
+        <p>
+          {{ selectedAnimal.description }}
+        </p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+  <div>
+    <mat-form-field style="width: 300px;">
+      <input matInput placeholder="Address">
+    </mat-form-field>
+    <br>
+    <button mat-raised-button color="primary" style="width: 300px;">Send this fish to my address!</button>
+  </div>
+</section>

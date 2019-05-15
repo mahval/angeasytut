@@ -1,0 +1,9 @@
+.adoption-card-list {
+    display: flex;
+    flex-direction: row;
+}
+
+.adoption-card-list .adoption-card {
+    max-width: 300px;
+    margin: 20px;
+}

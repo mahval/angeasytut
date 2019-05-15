@@ -1,0 +1,59 @@
+<section>
+  <h1>Welcome to Adopt'a Pet</h1>
+
+  <section>
+    <h3>If you are interested in adopting a pet fish or two (or ten!) you have come to the right place.</h3>
+
+    <p>Our fish are 100% real and top quality. They come straight from our local ponds, and they would all prefer to
+      stay
+      in
+      your fish tank than among predators and plastic waste.</p>
+
+    <h3>Why fish are awesome</h3>
+
+    <p>Have you ever owned fish? My husband and our youngest daughter love to sit in front of the aquarium and just
+      watch
+      the shrimp and the fish. It’s very calming and relaxing, and it’s something they can do together.</p>
+
+    <h3>Still not convinced? How about this:</h3>
+    <ol>
+      <li>
+        Fish are great starter pets, especially for children to learn responsibility.
+      </li>
+      <li>
+        Fish are very calming. Watching a fish swim through the water is very tranquil and relaxing.
+      </li>
+      <li>
+        You don’t have to worry about a fish making too much noise like a barking dog.
+      </li>
+      <li>
+        Adding a fish tank to your home space is a great way to add decor.
+      </li>
+      <li>
+        You could train your fish to do tricks! (We had one Betta that could swim through a hoop for a treat.)
+      </li>
+    </ol>
+  </section>
+
+  <h2>Our fish &mdash; <a routerLink="adoption/fish" routerLinkActive="active">Visit them here</a></h2>
+
+  <section>
+    <div class="adoption-card-list">
+      <mat-card class="adoption-card" *ngFor="let fish of LIST_OF_FISH">
+        <mat-card-header>
+          <mat-card-title>{{ fish.name }}</mat-card-title>
+          <mat-card-subtitle>Species: {{ fish.species }}</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image [src]="'../../assets/' + fish.imagefilename" alt="'Photo of ' + {{ fish.name }}">
+        <mat-card-content>
+          <p>
+            {{ fish.description }}
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-raised-button color="primary" (click)="showDetailsFish(fish)">ADOPT</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </section>
+</section>
